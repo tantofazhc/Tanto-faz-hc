@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://scontent.fbel7-1.fna.fbcdn.net/v/t39.30808-6/462653588_9189799637702999_2109891566962432019_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=AFT0Mjf0k0EQ7kNvgEH-a_C&_nc_oc=AdgaKEeGQJPB1yI5fd4OwDvMEB-C5Ia3GnIEwR8EsYX4s3nW8Gl32d7MGjc3lVJwi7yEMazNWaNXZvSs7dxFiMsG&_nc_zt=23&_nc_ht=scontent.fbel7-1.fna&_nc_gid=A6OVX0TWBN30VyVYbFO7nIK&oh=00_AYAHqy6zXRhAOFiLa2n-YzRjUJSK3Ng2B9QslLgwK6f5JA&oe=67CE6B78"); /* Caminho da imagem de fundo */
+    background-size: cover; /* Cobrir toda a tela */
+    background-position: center; /* Centralizar a imagem */
+    background-attachment: fixed; /* Fixar o fundo ao rolar a página */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Overlay escuro para melhorar a legibilidade */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay preto com 60% de opacidade */
+    z-index: -1; /* Coloca o overlay atrás do conteúdo */
+}
+
+/* Header estilizado */
+header {
+    background: rgba(26, 24, 23, 0.8); /* Fundo semi-transparente */
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(29, 27, 26, 0.5);
+    position: relative; /* Garante que o header fique acima do overlay */
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Galeria de fotos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    position: relative; /* Garante que a galeria fique acima do overlay */
+    z-index: 1;
+}
+
+.photo {
+    background: rgba(44, 44, 44, 0.8); /* Fundo semi-transparente */
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(100, 79, 75, 0.6);
+}
+
+.photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo p {
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #ddd;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* Footer estilizado */
+footer {
+    background: transparent; /* Totalmente transparente */
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300;
+    color: #fff; /* Garante que o texto seja legível */
+}
+    
